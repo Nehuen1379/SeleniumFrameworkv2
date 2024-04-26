@@ -1,15 +1,11 @@
 package com.selenium.ar.stepdefinitions;
 
 import com.selenium.ar.pages.AdminPage;
-import com.selenium.ar.pages.LoginPage;
 import com.selenium.ar.pages.ValidationPage;
 import com.selenium.ar.utilities.website.WebSite;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
-import org.junit.Assert;
 
 public class AdminStepDefinitions {
 
