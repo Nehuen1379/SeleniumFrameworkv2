@@ -24,7 +24,7 @@ jobs:
         run: mvn clean verify serenity:aggregate
 
       - name: Upload report artifact
-         uses: actions/upload-artifact@v2
-          with:
-           name: serenity-report
-             path: target/site/serenity
+        uses: actions/upload-artifact@v2
+        with:
+          name: serenity-report
+          path: target/site/serenity
