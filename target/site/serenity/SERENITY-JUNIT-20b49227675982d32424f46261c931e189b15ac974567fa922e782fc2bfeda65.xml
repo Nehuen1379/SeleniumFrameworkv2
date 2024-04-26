@@ -1,4 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="TC02 - Cargar Usuario" skipped="0" tests="1" time="0.52" timestamp="2024-04-25 09:46:13"><testcase name="1. Cargar un usuario en Web Tables"><error message="'void org.openqa.selenium.chrome.ChromeDriverService$Builder.parseLogOutput(java.lang.String)'" type="java.lang.NoSuchMethodError">'void org.openqa.selenium.chrome.ChromeDriverService$Builder.parseLogOutput(java.lang.String)'</error><system-err>'void org.openqa.selenium.chrome.ChromeDriverService$Builder.parseLogOutput(java.lang.String)'&#13;
-com.selenium.ar.utilities.website.WebSite.navigateTo(WebSite.java:15)&#13;
-com.selenium.ar.stepdefinitions.WebTablesStepDefinitions.usuarioIngresaAWebTables(WebTablesStepDefinitions.java:24)&#13;
-</system-err></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="TC02 - Cargar Usuario" skipped="0" tests="1" time="32.67" timestamp="2024-04-25 09:54:17"><testcase name="1. Cargar un usuario en Web Tables"/></testsuite>
