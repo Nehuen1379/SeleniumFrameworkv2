@@ -21,17 +21,17 @@ jobs:
           cache: maven
 
       - name: Build with Maven
-        run: mvn clean test
+        run: mvn clean verify serenity:aggregate
 
-          - name: Generate and Save Cucumber Report
-            run: |
-              mkdir -p target/reports
-              mvn io.github.temyers:cucumber-reporting:5.5.0:cucumber-report -Dcucumber.reporting.config.prettyReport=true -Dcucumber.reporting.config.jsonReportPaths="target/cucumber-reports/report.json"
-              mv target/cucumber-reports/report.html target/reports
-            continue-on-error: true
+      - name: Serenity Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: serenity-report
+          path: target/serenity-report
 
-          - name: Archive Cucumber Report
-            uses: actions/upload-artifact@v2
-            with:
-              name: cucumber-report
-              path: target/reports
+      - name: Update Report into Repo
+        uses: ad-m/github-push-action@develop
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: develop # Cambia esto según la rama en la que quieras actualizar el reporte
+          directory: target/serenity-report # Ruta al directorio que contiene los reportes
