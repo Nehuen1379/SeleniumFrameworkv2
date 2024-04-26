@@ -29,3 +29,9 @@ jobs:
           name: serenity-report
           path: target/serenity-report
 
+      - name: Update Report into Repo
+        uses: ad-m/github-push-action@develop
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: develop # Cambia esto según la rama en la que quieras actualizar el reporte
+          directory: target/serenity-report # Ruta al directorio que contiene los reportes
