@@ -11,10 +11,12 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <serenity-version>4.1.0</serenity-version>
+        <serenity-version>4.1.6</serenity-version>
         <junit-version>4.13.2</junit-version>
         <maven-plugins-version>3.1.2</maven-plugins-version>
         <slf4j-version>2.0.7</slf4j-version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
     <dependencies>
@@ -25,6 +27,13 @@
             <artifactId>serenity-core</artifactId>
             <version>${serenity-version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.7.0</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-cucumber -->
         <dependency>
             <groupId>net.serenity-bdd</groupId>

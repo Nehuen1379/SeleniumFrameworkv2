@@ -8,7 +8,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-2022
 
     steps:
       - uses: actions/checkout@v3
@@ -17,6 +17,21 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '17'
+          distribution: 'temurin'
+          cache: maven
 
       - name: Build with Maven
-        run: mvn clean verify
+        run: mvn clean test
+
+          - name: Generate and Save Cucumber Report
+            run: |
+              mkdir -p target/reports
+              mvn io.github.temyers:cucumber-reporting:5.5.0:cucumber-report -Dcucumber.reporting.config.prettyReport=true -Dcucumber.reporting.config.jsonReportPaths="target/cucumber-reports/report.json"
+              mv target/cucumber-reports/report.html target/reports
+            continue-on-error: true
+
+          - name: Archive Cucumber Report
+            uses: actions/upload-artifact@v2
+            with:
+              name: cucumber-report
+              path: target/reports
