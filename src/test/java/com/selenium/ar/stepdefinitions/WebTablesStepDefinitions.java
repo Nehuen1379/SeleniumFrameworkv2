@@ -23,14 +23,16 @@ public class WebTablesStepDefinitions {
     public void usuarioIngresaAWebTables() {
         url.navigateTo("https://demoqa.com/webtables");
     }
+
     @When("completa el formulario")
     public void usuarioCompletaFormularioWebTables() {
         wp.ingresarFormularioWebTables("Test","Test","test@gmail.com","10","1000","Test");
     }
 
-    @Then("^el usuario verá que el usuario \"([^\"]*)\" está presente en la grilla de usuarios$")
-    public void validoCorrectoRegistroDelUsuario(String firstname) {
+    @Then("^el usuario vera que el usuario \"([^\"]*)\" esta presente en la grilla de usuarios$")
+    public void validacionNuevoUsuario(String firstname) {
         boolean resultado = vp.verificarCargaUsuarioWebTables(firstname);
         System.out.println("El usuario " + (resultado ? "sí" : "no") + " está en la grilla.");
     }
+
 }
