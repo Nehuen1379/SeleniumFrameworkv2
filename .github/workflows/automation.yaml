@@ -21,11 +21,4 @@ jobs:
           cache: maven
 
       - name: Build with Maven
-        run: mvn clean test
-
-      - name: Generate and Save Cucumber Report
-        run: |
-          mkdir -p target/reports
-          mvn io.github.temyers:cucumber-reporting:5.5.0:cucumber-report -Dcucumber.reporting.config.prettyReport=true -Dcucumber.reporting.config.jsonReportPaths="target/cucumber-reports/report.json"
-          mv target/cucumber-reports/report.html target/reports
-        continue-on-error: true
+        run: mvn clean verify serenity:aggregate
