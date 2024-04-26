@@ -23,15 +23,9 @@ jobs:
       - name: Build with Maven
         run: mvn clean test
 
-          - name: Generate and Save Cucumber Report
-            run: |
-              mkdir -p target/reports
-              mvn io.github.temyers:cucumber-reporting:5.5.0:cucumber-report -Dcucumber.reporting.config.prettyReport=true -Dcucumber.reporting.config.jsonReportPaths="target/cucumber-reports/report.json"
-              mv target/cucumber-reports/report.html target/reports
-            continue-on-error: true
-
-          - name: Archive Cucumber Report
-            uses: actions/upload-artifact@v2
-            with:
-              name: cucumber-report
-              path: target/reports
+      - name: Generate and Save Allure Report
+        run: |
+          mkdir -p target/allure-results
+          mvn clean test allure:report
+          mv target/site/allure-maven-plugin/* target/reports
+        continue-on-error: true
