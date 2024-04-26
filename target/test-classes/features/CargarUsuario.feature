@@ -6,5 +6,5 @@ Feature: TC02 - Cargar Usuario
   Scenario: 1. Cargar un usuario en Web Tables
     Given que el usuario ingresa a Web Tables
     When completa el formulario
-    Then el usuario verá que el usuario "Test1" está presente en la grilla de usuarios
+    Then el usuario verá que el usuario "Test" está presente en la grilla de usuarios
 
