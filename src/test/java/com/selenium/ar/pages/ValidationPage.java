@@ -17,6 +17,14 @@ public class ValidationPage extends PageObject {
     @FindBy(xpath = "//div[@class='rt-table']")
     protected WebElementFacade dgvWebTables;
 
+    @FindBy(xpath = "//*[@for='impressiveRadio']")
+    protected WebElementFacade rdbImpressive;
+
+    @FindBy(xpath = "//span[@class='text-success']")
+    protected WebElementFacade lblTextYes;
+
+
+
     @Step("Validar que el texto 'Dashboard' se encuentre visible para verificar login exitoso")
     public Boolean verificarTextoDashboard(){
         return lblDashboard.isDisplayed();
@@ -32,5 +40,23 @@ public class ValidationPage extends PageObject {
         }
         return false;
     }
+
+    @Step("Validar que el radioButton 'Impressive' se encuentre habilitado")
+    public boolean estaHabilitadoRdbImpressive() {
+        return rdbImpressive.isEnabled();
+    }
+
+    @Step("Validar que el radioButton 'Impressive' se encuentre habilitado")
+    public boolean estaDeshabilitadoRdbNo() {
+        return rdbImpressive.isDisabled();
+    }
+
+    @Step("Validar que el texto Yes se encuentre presente")
+    public Boolean validarQueElTextoYesSeEncuentrePresente(){
+        return lblTextYes.isVisible();
+    }
+
+
+
 }
 

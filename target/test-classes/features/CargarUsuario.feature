@@ -1,5 +1,5 @@
-@Prueba3
-Feature: TC02 - Cargar Usuario
+@Prueba1
+Feature: TC01 - Cargar Usuario
 
   Background: Ingresar al modulo de Web Tables y dar de alta un usuario
 

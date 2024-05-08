@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="TC02 - RadioButton" skipped="0" tests="1" time="26.53" timestamp="2024-05-04 07:39:08"><testcase name="1. Cargar un usuario en Web Tables"><error message="Timed out after 2 seconds. Element not available&#10;Build info: version: '4.19.0', revision: '5f9cec8963'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.ElementNotInteractableException">Timed out after 2 seconds. Element not available
+Build info: version: '4.19.0', revision: '5f9cec8963'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: driver.version: unknown</error><system-err>Timed out after 2 seconds. Element not available
+Build info: version: '4.19.0', revision: '5f9cec8963'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: driver.version: unknown&#13;
+com.selenium.ar.pages.RadioButtonPage.hacerClickRadioButtonYes(RadioButtonPage.java:15)&#13;
+com.selenium.ar.stepdefinitions.RadioButtonStepDefinitions.usuarioCompletaFormularioWebTables(RadioButtonStepDefinitions.java:30)&#13;
+</system-err></testcase></testsuite>

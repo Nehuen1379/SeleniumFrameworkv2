@@ -33,5 +33,5 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: develop # Cambia esto según la rama en la que quieras actualizar el reporte
+          branch: develop
           directory: target/serenity-report

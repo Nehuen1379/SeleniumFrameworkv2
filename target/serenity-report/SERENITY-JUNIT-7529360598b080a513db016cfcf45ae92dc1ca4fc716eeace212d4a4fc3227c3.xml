@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="TC02 - RadioButton" skipped="0" tests="1" time="19.77" timestamp="2024-05-04 09:22:39"><testcase name="1. Click en Radio Button y Validacion"><failure type="java.lang.AssertionError"/><system-err>null&#13;
+com.selenium.ar.stepdefinitions.RadioButtonStepDefinitions.validoQueElRadioButtonEsteDeshabilitado(RadioButtonStepDefinitions.java:40)&#13;
+✽.valido que el radioButton Impressive se encuentre habilitado(file:///C:/Users/Nehue/SeleniumFrameworkv2/src/test/resources/features/RadioButton.feature:10)&#13;
+</system-err></testcase></testsuite>
