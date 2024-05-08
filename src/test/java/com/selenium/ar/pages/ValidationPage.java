@@ -56,7 +56,5 @@ public class ValidationPage extends PageObject {
         return lblTextYes.isVisible();
     }
 
-
-
 }
 
